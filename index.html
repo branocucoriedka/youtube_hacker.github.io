@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+      <meta name="description" content="" />
+      <meta name="author" content="" />
+      <title>Youtube Hacker</title>
+      <!-- Favicon-->
+      <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+      <!-- Font Awesome icons (free version)-->
+      <script
+         src="https://use.fontawesome.com/releases/v6.3.0/js/all.js"
+         crossorigin="anonymous"
+      ></script>
+      <!-- Google fonts-->
+      <link
+         href="https://fonts.googleapis.com/css?family=Montserrat:400,700"
+         rel="stylesheet"
+         type="text/css"
+      />
+      <link
+         href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic"
+         rel="stylesheet"
+         type="text/css"
+      />
+      <!-- Core theme CSS (includes Bootstrap)-->
+      <link href="css/styles.css" rel="stylesheet" />
+   </head>
+   <body id="page-top">
+      <!-- Navigation-->
+      <nav class="navbar navbar-expand-lg bg-danger text-uppercase fixed-top" id="mainNav">
+         <div class="container">
+            <a class="navbar-brand" href="#comments">Youtube Hacker</a>
+         </div>
+      </nav>
+      <!-- Masthead-->
+      <header class="masthead bg-secondary text-white text-center">
+         <div class="container d-flex align-items-center flex-column">
+            <!-- Masthead Avatar Image-->
+            <img class="masthead-avatar mb-5" src="assets/img/avataaars.svg" alt="..." />
+            <!-- Masthead Heading-->
+            <h1 class="masthead-heading text-uppercase mb-0">Be anonymous !</h1>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-danger">
+               <div class="divider-custom-line"></div>
+               <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+               <div class="divider-custom-line"></div>
+            </div>
+            <!-- Masthead Subheading-->
+            <p class="masthead-subheading font-weight-light mb-0">
+               Comment on any YouTube video without revealing your identity.
+            </p>
+         </div>
+      </header>
+
+      <section class="page-section bg-dark text-white mb-0" id="comments">
+         <div
+            class="container"
+            style="background-color: rgba(0, 0, 0, 0.4); padding: 15px; border-radius: 15px"
+         >
+            <!-- About Section Heading-->
+            <h2 class="page-section-heading text-center text-uppercase mt-3">Free comments</h2>
+            <!-- Icon Divider-->
+            <div class="divider-custom divider-dark">
+               <div class="divider-custom-line"></div>
+               <div class="divider-custom-icon"><i class="fas fa-star"></i></div>
+               <div class="divider-custom-line"></div>
+            </div>
+
+            <form id="commentsForm">
+               <h2 class="masthead-subheading font-weight-light mb-2 mt-3 text-center">
+                  Choose youtube video to be commented!
+               </h2>
+               <hr />
+               <div class="form-group">
+                  <input
+                     type="url"
+                     class="form-control mb-3"
+                     id="videoLinkToComment"
+                     placeholder="Enter URL here"
+                  />
+               </div>
+
+               <p id="message_comment" style="color: red"></p>
+
+               <div id="video_is_correct" style="display: none">
+                  <h2
+                     id="selectCommentUsersNadpis"
+                     class="masthead-subheading font-weight-light mb-0 mt-2 text-center"
+                  >
+                     Choose youtube accounts for given action!
+                  </h2>
+                  <div class="table-responsive">
+                     <table class="table text-white">
+                        <thead>
+                           <tr>
+                              <th scope="col"></th>
+                              <th scope="col"></th>
+                           </tr>
+                        </thead>
+                        <tbody id="youtube_comment_users"></tbody>
+                     </table>
+                  </div>
+
+                  <p id="message_comment_form" style="color: red"></p>
+
+                  <div style="width: 285px; margin: 0 auto">
+                     <button
+                        type="submit"
+                        style="float: left"
+                        class="btn btn-primary"
+                        onclick="event.preventDefault();generateComments(YoutubeUsers);"
+                     >
+                        Generate comments
+                     </button>
+                     <button
+                        type="submit"
+                        style="float: right"
+                        class="btn btn-primary mx-2"
+                        onclick="event.preventDefault();selectAllMails();"
+                     >
+                        Select All
+                     </button>
+                  </div>
+                  <div style="width: 100%; height: 55px"></div>
+
+                  <!-- <img
+                     id="thumbnail_comment"
+                     src=""
+                     alt="No thumbnail available"
+                     style="display: none; width: 450px; margin: auto; border: 1px dashed red"
+                  /> -->
+               </div>
+            </form>
+         </div>
+      </section>
+
+      <!-- Footer-->
+      <footer class="footer text-center bg-secondary">
+         <div class="container">
+            <div class="row">
+               <!-- Footer Location-->
+               <div class="col-lg-4 mb-5 mb-lg-0">
+                  <h4 class="text-uppercase mb-4">Location</h4>
+                  <p class="lead mb-0">
+                     2215 John Daniel Drive
+                     <br />
+                     Clark, MO 65243
+                  </p>
+               </div>
+               <!-- Footer Social Icons-->
+               <div class="col-lg-4 mb-5 mb-lg-0">
+                  <h4 class="text-uppercase mb-4">Around the Web</h4>
+                  <a class="btn btn-outline-light btn-social mx-1" href="#!"
+                     ><i class="fab fa-fw fa-facebook-f"></i
+                  ></a>
+                  <a class="btn btn-outline-light btn-social mx-1" href="#!"
+                     ><i class="fab fa-fw fa-twitter"></i
+                  ></a>
+                  <a class="btn btn-outline-light btn-social mx-1" href="#!"
+                     ><i class="fab fa-fw fa-linkedin-in"></i
+                  ></a>
+                  <a class="btn btn-outline-light btn-social mx-1" href="#!"
+                     ><i class="fab fa-fw fa-dribbble"></i
+                  ></a>
+               </div>
+               <!-- Footer About Text-->
+               <div class="col-lg-4">
+                  <h4 class="text-uppercase mb-4">About Youtube Hacker</h4>
+                  <p class="lead mb-0">This site is created just for entertainment &#128512;</p>
+               </div>
+            </div>
+         </div>
+      </footer>
+      <div class="copyright py-4 text-center bg-danger text-white">
+         <div class="container"><small>&copy; Youtube Hacker 2024</small></div>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
+      <script src="js/scripts.js"></script>
+      <script src="js/youtubeAccess.js"></script>
+      <script src="js/comments.js"></script>
+      <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+      <script>
+         document.addEventListener("DOMContentLoaded", function () {
+            fillCommentUsersTable(YoutubeUsers);
+            const videoLinkToComment = document.getElementById("videoLinkToComment");
+            videoLinkToComment.addEventListener("input", function () {
+               if (videoLinkToComment.value.length === 0) {
+                  document.getElementById("message_comment").style.display = "none";
+               } else {
+                  document.getElementById("message_comment").style.display = "block";
+               }
+               retrieveCommentThumbnail(videoLinkToComment.value);
+            });
+         });
+      </script>
+   </body>
+</html>
